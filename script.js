@@ -354,10 +354,38 @@ try{
 
 }
 
+//TODO Finally
+//! Finally dato interesante
+//*Utilice un ejemplo con try catch y entendi el valor de finally
+//*En este caso para no repetir la funcion de cerrar el modal lo colocamos en finally
+//*Ya que finally se ejecutara siempre ya sea try o catch quien se ejecute
 
+try{
+    const destructuracion = [1,2,3 ];
+
+    let d1 = destructuracion[0],
+        d2 = destructuracion[1],
+        d3 = destructuracion[2]; 
+    
+        console.log(d6);
+    console.log("Abrimos modal exitoso");
+    
+    
+} catch (error){
+    console.log("Abrimos modal error")
+
+    
+}finally{
+
+          console.log("Cerrar modal");
+}
+
+//todo Saboteando con throw 
 try {
     let tryerror="y";
-    
+
+//* Levanta un error y con el new error lo especificas     
+
     if(isNaN(tryerror)){
         throw new Error("El caracater introducido no es un Numero");
 
@@ -372,19 +400,93 @@ try {
 //?    JavaScript: 17. break & continue - #jonmircha
 //? =================================================
 
+//TODO Break
+
+const numerosbreak = [1,2,3,4,5,6,7,8,9,10,11,12,13,"Hola mundo"];
+for (let i=0; i < numerosbreak.length; i++){
+    if (i===5){
+        break;
+    }
+    console.log(numerosbreak[i]);
+}
+
+//* Break rompe el ciclo
+//Se rompe el ciclo cuando se cumpla la condicion
+
+//TODO Continue
+
+const numerosbreak1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,"Hola mundo"];
+for (let i=0; i < numerosbreak.length; i++){
+    if (i===5){
+        continue;
+    }
+    console.log(numerosbreak[i]);
+}
+
+//* Continue Salta el ciclo
+// Cuando llega al valor 5 se salta porque cumple el if pero sigue todo el ciclo
+
+
+//const numerosbreak1 = [1,2,3,4,5,6,7,8,9,10,11,12,13,"Hola mundo"];
+//for (let i=0; i < numerosbreak.length; i++){
+//    console.log(i);
+//}  
+
+//? =================================================
+//?    JavaScript: 18. Destructuración - #jonmircha
+//? =================================================
+
+//todo SIN DESTRUCTURACION
+        const destructuracion = [1,2,3,4 ];
+
+        let uno = destructuracion[0],
+            dos = destructuracion[1],
+            tres = destructuracion[2], 
+            cuatro = destructuracion[3];
+
+        console.log(uno,dos,tres,cuatro);
+
+        //*================================
+
+        const vocalesd = ["a","b","c"];
+        let primera = vocalesd[0],
+            segundo = vocalesd[1],
+            tercero = vocalesd[2];
+
+        console.log(primera,segundo,tercero);
+
+        //*================================
 
 
 
 
 
+//todo CON DESTRUCTURACION
+        const [one,two,three,four] = destructuracion;
+        console.log(one,two,three,four);
 
+        const [a,b,c] = vocalesd;
+        console.log(a,b,c)
 
+        //*================================
 
+        let persona = {
+            Nombre: "alex",
+            Apellido: "od",
+            Edad: 35,
+        }
 
+        const {Nombre,Apellido,Edad} = persona;
+        console.log(Nombre,Apellido, Edad);
+            
+        
+//Ejemplo de Harvey 
+//class Carro{
 
+//}
+//let aaa = new Carro() 
+//console.log(typeof aaa)
 
-
-
-
+// Azucar sintactico es el mejor termino al referirse lo que es poo en JS segun stackoverflow
 
 
