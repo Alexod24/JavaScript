@@ -470,14 +470,16 @@ for (let i=0; i < numerosbreak.length; i++){
 
         //*================================
 
-        let persona = {
+        const persona = {
             Nombre: "alex",
             Apellido: "od",
             Edad: 35,
         }
-
-        const {Nombre,Apellido,Edad} = persona;
-        console.log(Nombre,Apellido, Edad);
+        //* Recordemos que las varaibles se tienen que llamar igual o sino 
+        //* Tener en cuenta que el orden de las variables no afectara el resultado
+        const {Nombre,Edad,Apellido} = persona;
+        console.log(Nombre,Apellido,Edad);
+        
             
         
 //Ejemplo de Harvey 
@@ -488,5 +490,30 @@ for (let i=0; i < numerosbreak.length; i++){
 //console.log(typeof aaa)
 
 // Azucar sintactico es el mejor termino al referirse lo que es poo en JS segun stackoverflow
+
+//? =================================================
+//?    JavaScript: 19. Objetos literales - #jonmircha
+//? =================================================
+
+    let nombre19 = "kEnAi",
+        edad19 = 7;
+
+    const perro19 = {
+        nombre19:nombre19,
+        edad19:edad19,
+        ladrar:function(){
+            console.log("Guau guau auuuuu")
+        }
+    }
+
+    const perro20={
+        nombre19:nombre19,
+        edad19:edad19,
+        ladrar:function(){
+            console.logwe("Miau miauuu")
+        }
+    }
+
+    console.log(perro19,perro20);
 
 
