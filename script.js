@@ -496,7 +496,9 @@ for (let i=0; i < numerosbreak.length; i++){
 //? =================================================
 
     let nombre19 = "kEnAi",
-        edad19 = 7;
+        edad19 = 7,
+        nombre20 = "Firulais",
+        edad20 = 10;
 
     const perro19 = {
         nombre19:nombre19,
@@ -507,13 +509,18 @@ for (let i=0; i < numerosbreak.length; i++){
     }
 
     const perro20={
-        nombre19:nombre19,
-        edad19:edad19,
+        nombre20:nombre20,
+        edad20:edad20,
         ladrar:function(){
             console.logwe("Miau miauuu")
         }
     }
 
-    console.log(perro19,perro20);
+
+    console.log(perro19);
+    perro19.ladrar()
+
+    
+
 
 
