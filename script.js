@@ -516,9 +516,67 @@ for (let i=0; i < numerosbreak.length; i++){
         }
     }
 
-
     console.log(perro19);
     perro19.ladrar()
+
+//! Dato interesnte
+// Nuevas formas de declarar objetos literales
+
+    const dog ={
+        nombre20,
+        edad20,
+        raza:"Callejero",
+        ladrar(){
+            console.log("guau guau guau")
+        }
+    }
+
+    dog.ladrar ();
+    
+//? =========================================================================
+//?    JavaScript: 20. Parámetros REST & Operador Spread - #jonmircha
+//? =========================================================================
+
+//Esto se usa en el dia dia
+//TODO Parametros Rest
+function sumar (a,b, ...c) {
+    let resultado = a+b;
+//* Recordemos que el foreach sirve para imprimir cada elemento que contenga c
+    c.forEach(function (n){
+        resultado += n
+    });
+    return resultado;
+}
+
+console.log(sumar(1,2));
+console.log(sumar(1,2,3,4));
+console.log(sumar(1,2,3,4,5));
+//* Parametros infinitos 
+
+//TODO Spread Operator 
+//Tambien se puede usar el operador de propagacion 
+const arr1 =[1,2,3,4,5];
+    arr2 = [6,7,8,9,0];
+console.log(arr1,arr2)
+//* Si quiero que el arreglo imprima la combinacion de los arreglos anteriores puedo usar el SO
+const arr3=[arr1, arr2];
+console.log(arr3);
+
+const arr4=[...arr1, ...arr2];
+console.log(arr4);
+
+const arrhm =["H","O","L","A"];
+const arrhm2 = ["M","U","N","D","O"];
+console.log(arrhm,arrhm2)
+//* Aqui uso el Spread Operator
+const arrhm3 = [...arrhm,...arrhm2]
+console.log(arrhm3)
+
+//? =================================================
+//?    JavaScript: 21. Arrow Functions - #jonmircha
+//? =================================================
+
+
 
     
 
