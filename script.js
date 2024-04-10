@@ -575,6 +575,105 @@ console.log(arrhm3)
 //? =================================================
 //?    JavaScript: 21. Arrow Functions - #jonmircha
 //? =================================================
+//TODO Ejemplo de Arrow Functions
+
+//TODO* Una arrow function es cuando borramos la palabra function y entre el parentesis y la llave hacemos un =>
+
+// const saludar = function(){
+//     console.log("Hola");
+// }
+
+// saludar();
+
+//* Segunda forma 
+
+// const saludar = () => {
+//     console.log("Hola");
+// }
+// saludar();
+
+//* Tercera forma (Codigo limpio y ahorramos lineas)
+
+// const saludar = () => console.log("Hola");
+
+// saludar();
+
+// TODO Arrow Function con parametros 
+
+const saludar = nombre => console.log(`Hola ${nombre}`);
+saludar("Alex");
+//* Tambien podemos evitar la palabra retunr 
+
+const sumarAF = function (a,b){
+    return a+b;
+}
+console.log(sumarAF(5,5))
+
+const sumarAF1 = (a,b) => a+b;
+console.log(sumarAF1(10,10))
+
+//TODO Arrow Function con el metodo foreach 
+//* El foreach puede recibir la posicion de los datos que esta recibiendo del arreglo
+const funcionDeVariasLineas = () => {
+    console.log("Uno");
+    console.log("Dos");
+    console.log("Tres");
+}
+funcionDeVariasLineas();
+
+const numerosAF = [1,2,3,4,5];
+
+//* Normal 
+// numerosAF.forEach(function(el,index)  {
+//     console.log(`El elemento ${el} esta en la posicion
+//     ${index}`)
+
+// })
+
+//* Transformando a una AF
+
+numerosAF.forEach((el,index) => console.log(`El elemento ${el} esta en la posicion ${index}`));
+
+//TODO Las arrow function con this 
+//* Las arrow function tienen la capcacidad de capturar el contexto donde se encuentran
+
+function perroAF (){
+    console.log(this);
+}
+perroAF();
+//* Una funcion normal respeta el contexto donde se encuentra , para esta funcion this es un objeto
+const perroAF1 = {
+    nombre:"Firualis",
+    edad:20,
+    ladrar: function(){
+        console.log(this)
+    }
+}
+perroAF1.ladrar();
+
+
+//*Las arrowfunciont tienes la capacidad de saltar el contexto 
+const perroAF2 = {
+    nombre:"Firualis",
+    edad:20,
+    ladrar:()=>{
+        console.log(this)
+    }
+}
+perroAF2.ladrar();
+
+//* Esta forma de expresar las formas literales, vemos que this vuelve a ser como antes
+const perroAF3 = {
+    nombre:"Firualis",
+    edad:20,
+    ladrar(){
+        console.log(this)
+    }
+}
+perroAF3.ladrar();
+
+
+
 
 
 
