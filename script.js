@@ -672,6 +672,166 @@ const perroAF3 = {
 }
 perroAF3.ladrar();
 
+//? =================================================
+//?    JavaScript: 22. Prototipos - #jonmircha
+//? =================================================
+
+console.log(`
+// =================================================
+//    JavaScript: 22. Prototipos - #jonmircha
+// =================================================
+`);
+
+//! Programacion orientaba a objetos
+// Dentro de la programacion orientaba a objetos tiene 3 caracteristicas
+/* 
+Clases - Modelo a seguir
+Objeto - Es una instancia de una clase (es una copia de las clases)
+    Atributo -es una caracteristica de un objeto (son variables dentro de un objeto)
+    Metodos - son acciones que un objeto puede realizar (son funciones dentro de un objeto )
+*/
+
+//! Recomiendo ver el curso de POo con PHP y mysql
+//TODO Js es un lenguaje orientaba a objetos pero basado en prototipos no en clases
+//TODO transforma las clases en una funcion prototipal, por eos es muy importante los prototipos
+
+//* PLaton decia que viviamos en el mundo de las ideas, es decir que cuando alguien dice silla cada uno le viene la repesentacion de una silla pero diferente es decir yo pienso en una silla de madera y tu de plastico 
+//* Platon decia que eso era la representacion fisica en el mundo tangible que como nosotros como sere humanos pensantes llammos silla
+//* Ootro ejemplo es que no importa en que idioma lo digas ya que seria la misma idea 
+
+// const mascota = {
+//     nombre:"Boby",
+//     hablar(){
+//       console.log("Guau guau")
+//     }
+// }
+
+// console.log(mascota);
+
+// const mascota1 = {
+//     nombre:"Michi",
+//     hablar(){
+//         console.log("Miau miau")
+//     }
+// }
+
+// console.log(mascota1);
+
+//TODO Funcion constructora 
+
+// function Animal(nombre,genero  ){
+//     this.nombre =nombre;
+//     this.genero =genero;
+
+//     this.sonar = function(){
+//         console.log("Hago sonidos porque estoy vivo")
+//     }
+//     this.saludar =function(){
+//         console.log(`Hola me llamo ${nombre}`)
+//     }
+// }
+
+// const Boby = new Animal ("Snoopy", "Macho");
+//  Michi = new Animal ("Kira","Macho");
+
+//  console.log(Boby);
+//  console.log(Michi);
+
+//  Boby.sonar();
+//  Boby.saludar();
+
+//  Michi.sonar();
+//  Michi.saludar();
+
+//! ESTO ES UNA BUENA PRACTICA Y UN CODIGO LIMPIO
+//TODO Funcion constructora donde asignamos los metodos al prototipo, no a la funcion como tal
+//* Dato importante que estas funciones no son problemas cuando solo tenemos dos objetos pero si tuvieramos mas si lo seria porque duplicaria en los 100
+//TODO PROTOTIPOS 
+function Animal(nombre,genero){
+    //Atributos
+    this.nombre =nombre;
+    this.genero =genero;
+    }
+
+    // Metodos agrgados al prototipo de la funcion constructora
+
+    Animal.prototype.sonar = function(){
+        console.log("Hago sonidos porque estoy vivo");
+    }
+
+    Animal.prototype.saludar= function(){
+        console.log(`Hola me llamo ${this.nombre}`);
+    }
+
+
+const Boby = new Animal ("Snoopy", "Macho");
+ Michi = new Animal ("Kira","Macho");
+
+ console.log(Boby);
+ console.log(Michi);
+
+ Boby.sonar();
+ Boby.saludar();
+
+ Michi.sonar();
+ Michi.saludar();
+
+// Una mejora cuando hay muchos objetos ya que la funcion se va a repetir dentro de los 100 objetos que se crea 
+// Para esto quitaremos el metodo sabor en esta caso 
+
+
+
+
+
+ //* Me toca hacerlo 
+
+//Atributos
+function Heroes (nombre,poder){
+    this.nombre=nombre;
+    this.poder=poder
+}
+
+//Metodos 
+
+Heroes.prototype.especial = function(){
+    console.log(`El especial de ${this.nombre} es lanzar rayitos a lo pendejo`);
+}
+
+Heroes.prototype.experiencia = function (){
+    console.log(`El poder de ${this.nombre} es ${this.poder}`);
+}
+
+const h1 = new Heroes ("Axe","Hoja selectiva")
+    h2 = new Heroes ("Rubick","Robar a lo pendejo")
+
+console.log(h1);
+console.log(h2);
+
+h1.especial();
+h1.experiencia();
+
+
+
+// Una mejora cuando hay muchos objetos ya que la funcion se va a repetir dentro de los 100 objetos que se crea 
+// Para esto quitaremos el metodo sabor en esta caso 
+
+//* Me toca de nuevo 
+
+//? ========================================================
+//?    JavaScript: 23. Herencia Prototípica - #jonmircha
+//? ========================================================
+
+console.log(`
+// ========================================================
+//    JavaScript: 23. Herencia Prototípica - #jonmircha
+// ========================================================
+`);
+
+//Java scipt usa el poo de otra manera pero si lo utiliza
+
+
+
+
 
 
 
