@@ -18,8 +18,15 @@ const funcionglocal = function(){
 
 funcionglocal();
 
-// =================================================
-//JavaScript: 11. Arreglos [Arrays] - #jonmircha
+//? =================================================
+//?    JavaScript: 11. Arreglos [Arrays] - #jonmircha
+//? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 11. Arreglos [Arrays] - #jonmircha
+// ==================================================
+`);
+
 //En un arrelgo la posicion siempre empieza por le numero 0, 
 
 new Number()
@@ -69,8 +76,15 @@ colores.forEach(function(el, index){
 })
 
 
-// =================================================
-//JavaScript: 12. Objetos - #jonmircha
+
+//? =================================================
+//?    JavaScript: 12. Objetos - #jonmircha
+//? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 12. Objetos - #jonmircha
+// ==================================================
+`);
 
 let objeto1 = new String("Hola");
 console.log(objeto1);
@@ -129,9 +143,15 @@ console.log(Object.values(alex));
 console.log(alex.hasOwnProperty("nombre"));
 console.log(alex.hasOwnProperty("saludo"));
 
-// =================================================
-// JavaScript: 13. Tipos de Operadores - #jonmircha
-console.log("JavaScript: 13. Tipos de Operadores");
+//? =================================================
+//?    JavaScript: 13. Tipos de Operadores - #jonmircha
+//? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 13. Tipos de Operadores - #jonmircha
+// ==================================================
+`);
+
 // Operadores aritmeticos: +-*/%()*/
 
 let ecuacion = 5 + (5-2)*2;
@@ -183,6 +203,12 @@ console.log(("9"==="9") && ("9"==="9"));
 //? =================================================
 //?    JavaScript: 14. Condicionales - #jonmircha
 //? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 14. Condicionales - #jonmircha
+// ==================================================
+`);
+
 
 console.log("JavaScript: 14. Condicionales");
 
@@ -268,6 +294,12 @@ switch (dia) {
 //? =================================================
 //?    JavaScript: 15. Ciclos (Loops) - #jonmircha
 //? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 15. Ciclos (Loops) - #jonmircha
+// ==================================================
+`);
+
 
 //TODO Cada vuelta se le llama iteracion
 //Este es un gran ejemplo de como funcion el While y el Do ya que el while primero 
@@ -336,6 +368,11 @@ for (const caracter of cadena) {
 //? =================================================
 //?    JavaScript: 16. Manejo de Errores - #jonmircha
 //? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 16. Manejo de Errores - #jonmircha
+// ==================================================
+`);
 
 //TODO trycatch - estructura de control al manejo de errores
 
@@ -399,6 +436,11 @@ try {
 //? =================================================
 //?    JavaScript: 17. break & continue - #jonmircha
 //? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 17. break & continue - #jonmircha
+// ==================================================
+`);
 
 //TODO Break
 
@@ -435,6 +477,11 @@ for (let i=0; i < numerosbreak.length; i++){
 //? =================================================
 //?    JavaScript: 18. Destructuración - #jonmircha
 //? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 18. Destructuración - #jonmircha
+// ==================================================
+`);
 
 //todo SIN DESTRUCTURACION
         const destructuracion = [1,2,3,4 ];
@@ -494,6 +541,11 @@ for (let i=0; i < numerosbreak.length; i++){
 //? =================================================
 //?    JavaScript: 19. Objetos literales - #jonmircha
 //? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 19. Objetos literales - #jonmircha
+// ==================================================
+`);
 
     let nombre19 = "kEnAi",
         edad19 = 7,
@@ -536,6 +588,11 @@ for (let i=0; i < numerosbreak.length; i++){
 //? =========================================================================
 //?    JavaScript: 20. Parámetros REST & Operador Spread - #jonmircha
 //? =========================================================================
+console.log(`
+// ==========================================================================
+//    JavaScript: 20. Parámetros REST & Operador Spread - #jonmircha
+// ==========================================================================
+`);
 
 //Esto se usa en el dia dia
 //TODO Parametros Rest
@@ -575,7 +632,14 @@ console.log(arrhm3)
 //? =================================================
 //?    JavaScript: 21. Arrow Functions - #jonmircha
 //? =================================================
+console.log(`
+// ==================================================
+//    JavaScript: 21. Arrow Functions - #jonmircha
+// ==================================================
+`);
+
 //TODO Ejemplo de Arrow Functions
+
 
 //TODO* Una arrow function es cuando borramos la palabra function y entre el parentesis y la llave hacemos un =>
 
@@ -825,55 +889,321 @@ console.log(`
 
 //TODO Herencia Prototipica 
 
-function Animal(nombre,genero){
-    //Atributos
-    this.nombre =nombre;
-    this.genero =genero;
+// function Animal(nombre,genero){
+//     //Atributos
+//     this.nombre =nombre;
+//     this.genero =genero;
+//     }
+
+//     // Metodos agrgados al prototipo de la funcion constructora
+
+//     Animal.prototype.sonar = function(){
+//         console.log("Hago sonidos porque estoy vivo");
+//     }
+
+//     Animal.prototype.saludar= function(){
+//         console.log(`Hola me llamo ${this.nombre}`);
+//     }
+
+//     //Herencia prototipica
+
+// function Perro(nombre,genero,tamanio){
+//     this.super = Animal;
+//     this.super(nombre,genero);
+//     this.tamanio = tamanio ;
+// }
+// // Perro esta heredando de animal
+// Perro.prototype = new Animal();
+// Perro.prototype.constructor = Perro;
+
+
+// // Sobreescritura de metodos del Prototipo padre en el hijo
+
+// Perro.prototype.sonar = function (){
+//     console.log("Soy un perro y mi sonido es un ladrido")
+// }
+// Perro.prototype.ladrar = function(){
+//     console.log("Guau guau gua")
+// }
+
+// const Snoopy = new Perro ("Snoopy", "Macho","Mediano");
+//  Michi = new Animal ("Kira","Macho");
+
+//  console.log(Snoopy);
+//  console.log(Michi);
+
+//  Snoopy.sonar();
+//  Snoopy.saludar();
+//  Snoopy.ladrar();
+
+//  Michi.sonar();
+//  Michi.saludar();
+
+
+ //? ========================================================
+//?    JavaScript: 24. Clases y Herencia - #jonmircha
+//? ========================================================
+
+console.log(`
+// ========================================================
+//    JavaScript: 24. Clases y Herencia - #jonmircha
+// ========================================================
+`);
+
+//TODO Clases y Herencia
+
+// class Animal{
+//     constructor(nombre,genero){
+//         this.nombre =nombre;
+//         this.genero =genero;
+//     }
+
+// //Metodos 
+//     sonar(){
+//         console.log("Hago sonidos porque estoy vivo");
+//     }
+//     saludar(){
+//         console.log(`Hola me llamo ${this.nombre}`);
+//     }
+// } 
+
+// class Perro extends Animal{
+//     constructor(nombre,genero,tamanio){
+//     //con el metodo super() se manda a llamar el cosntructor de la clase padre
+//     super(nombre,genero);
+//     this.tamanio=tamanio;
+//     }
+//     sonar(){
+//         console.log("Soy un perro y mi sonido es un ladrido")
+//     }
+
+//     ladrar(){
+//         console.log("Guau guau")
+//     }
+// }
+
+
+// const mimi = new Animal("Mimi","Hembra");
+//     scooby = new Perro("Scobby","Macho","Gigante");
+
+// console.log(mimi);
+// mimi.saludar();
+// mimi.sonar();
+
+// console.log(scooby);
+// scooby.sonar();
+// scooby.saludar();
+// scooby.ladrar();
+
+//* Me tocaaaa a miiii vamos crjo (Si fallas tienes que hacerlo de nuevo campeon)
+//! Practica 
+
+// class Animal {
+//     constructor(nombre, especie){
+//         this.nombre=nombre;
+//         this.especie=especie;
+//     } 
+
+//     saludo(){
+//         console.log(`Hola me llamo ${this.nombre}`)
+//     }
+
+//     accion(){
+//         console.log(`Soy un ${this.especie}, mucho gusto`)
+//     }
+// }
+
+// class Mascota extends Animal {
+//     constructor(nombre,especie,edad){
+//         super(nombre,especie);
+//         this.edad=edad;
+//     }
+
+//     despedida(){
+//         console.log(`Tengo ${this.edad} ,adios fue un placer`)
+//     }
+// }
+
+// const M1 = new Animal("Firulais","Perro")
+//     M2 = new Mascota("Michifus","Gato","20");
+
+// console.log(M1);
+// M1.saludo();
+// M1.accion();
+
+// console.log(M2);
+// M2.saludo();
+// M2.accion();
+// M2.despedida();
+
+//? ===========================================================
+//?    25. Métodos estáticos, getters y setters - #jonmircha
+//? ===========================================================
+
+console.log(`
+// ============================================================
+//    25. Métodos estáticos, getters y setters - #jonmircha
+// ============================================================
+`);
+
+//* Las clases solo es azucar sintactico y no puedes hacer que las calses sean publicas o privadas ya que solo es azucar no se basa en clases enr realidad
+
+class Animal{
+    constructor(nombre,genero){
+        this.nombre =nombre;
+        this.genero =genero;
     }
 
-    // Metodos agrgados al prototipo de la funcion constructora
-
-    Animal.prototype.sonar = function(){
+//Metodos 
+    sonar(){
         console.log("Hago sonidos porque estoy vivo");
     }
-
-    Animal.prototype.saludar= function(){
+    saludar(){
         console.log(`Hola me llamo ${this.nombre}`);
     }
+} 
 
-    //Herencia prototipica
+class Perro extends Animal{
+    constructor(nombre,genero,tamanio){
+    //con el metodo super() se manda a llamar el cosntructor de la clase padre
+    super(nombre,genero);
+    this.tamanio=tamanio;
+    //TODO Colocamos null para que no nos pida al inicio
+    this.raza=null;
+    }
+    sonar(){
+        console.log("Soy un perro y mi sonido es un ladrido")
+    }
 
-function Perro(nombre,genero,tamanio){
-    this.super = Animal;
-    this.super(nombre,genero);
-    this.tamanio = tamanio ;
+    ladrar(){
+        console.log("Guau guau")
+    }
+
+    //TODO STATIC
+    //Un metodo estatico se pueden ejecutar sin necesidad de instanciar la clase
+
+    static queEres(){
+        console.log("Los perros somos animales mamiferos que pertneceosa la familia de los caninos , somos considerados los mejores amigos del hombre")
+    }
+
+    //TODO SETTER Y GETTERS 
+    //Los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de neustra clase
+    get getRaza(){
+        return this.raza;
+    }
+
+    set setRaza(raza){
+        this.raza=raza
+    }
 }
-// Perro esta heredando de animal
-Perro.prototype = new Animal();
+
+Perro.queEres();
 
 
+const mimi = new Animal("Mimi","Hembra");
+    scooby = new Perro("Scobby","Macho","Gigante");
 
+console.log(mimi);
+mimi.saludar();
+mimi.sonar();
 
-const Boby = new Animal ("Snoopy", "Macho");
- Michi = new Animal ("Kira","Macho");
+console.log(scooby);
+scooby.sonar();
+scooby.saludar();
+scooby.ladrar();
 
- console.log(Boby);
- console.log(Michi);
+//TODO CONSULTA
+//* Cuando usamos get and setter tenemos que tratarlo como 
 
- Boby.sonar();
- Boby.saludar();
+console.log(scooby.getRaza);
+scooby.setRaza="Danes";
+console.log(scooby.getRaza);
 
- Michi.sonar();
- Michi.saludar();
+//? ===========================================================
+//?    JavaScript: 26. Objeto console - #jonmircha
+//? ===========================================================
 
+console.log(`
+// ============================================================
+//    JavaScript: 26. Objeto console - #jonmircha
+// ============================================================
+`);
 
+console.log(console);
+console.error("Esto es un error");
+console.warn("Esto es un avso");
+console.info("Esto es un mensaje infromativo")
+console.log("Un registro de lo que ha pasado en nuestra aplicacion")
 
+let nombre = "Alex";
+    apellido = "OD";
+    edad = 32;
 
+console.log(nombre);
+console.log(apellido);
+console.log(edad);
+console.log(nombre,apellido,edad)
+console.log(`Hola mi nombre es ${nombre}`)
 
+// Este es un comodin % que va a reemplara por ejemplo
 
+console.log(`Hola mi nombre es %s y tengo %s de edad`,nombre,edad)
+console.clear(); //*Limpiar ventana 
+console.log(window);
+console.log(document)
+//TODO GRUPOS
+console.group("Los cursos de jon mircha e uoyutube");
+console.log("Cursos de Javascript");
+console.log("Curso de NodeJS");
+console.log("Cursos de Flexbox");
+console.log("Curso de Node");
+console.groupEnd();
+//TODO DESPLEGABLE
+console.groupCollapsed("Curso de Node");
+console.groupEnd();
+console.clear();
+//TODO TABLITA
+console.log(console);
+console.table(Object.entries(console).sort());
+//TODO TABLA DE VOCALES Y NUMEROS
+const digitos = [1,2,3,4,5];
+    vocales = ["a","b","c","d"];
 
+console.table(digitos);
+console.table(vocales);
 
-    
+const perro = {
+    nombre:"Lele",
+    raza:"Dalmata"
+}
+console.table(perro);
+//TODO MEDIR TIEMPO
+//* Todo el tiempo en js te da en ms
+
+console.time("Cuanto tiempo se tarde mi codigo");
+const arreglo= Array(100);
+
+for (let i =0; i < arreglo.length; i++){
+    arreglo[i]=i;
+}
+
+console.timeEnd("Cuanto tiempo se tarde mi codigo")
+console.log(arreglo);
+
+console.clear();
+//TODO USA EL FOR Y ES BUENO PARA DETECTAR ERRORES 
+for(let i =0;i<= 10;i++){
+    console.count("codigo for");
+    console.log(i);
+}
+//TODO ESTO ES PARA HACER TESTING PARA HACER PRUEBAS UNITARIAS 
+//* Para hacer pequeñas pruebas esta bien 
+//* Si x es menos que 1 no pasara nada pero si es mayor saldra el error
+let x =1;
+    y = 2;
+    pruebaXY = "Se espera que x siempre sea menor que Y";
+
+    console.assert(x<y, (x,y,pruebaXY));
 
 
 
