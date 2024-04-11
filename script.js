@@ -747,34 +747,34 @@ Objeto - Es una instancia de una clase (es una copia de las clases)
 //TODO Funcion constructora donde asignamos los metodos al prototipo, no a la funcion como tal
 //* Dato importante que estas funciones no son problemas cuando solo tenemos dos objetos pero si tuvieramos mas si lo seria porque duplicaria en los 100
 //TODO PROTOTIPOS 
-function Animal(nombre,genero){
-    //Atributos
-    this.nombre =nombre;
-    this.genero =genero;
-    }
+// function Animal(nombre,genero){
+//     //Atributos
+//     this.nombre =nombre;
+//     this.genero =genero;
+//     }
 
-    // Metodos agrgados al prototipo de la funcion constructora
+//     // Metodos agrgados al prototipo de la funcion constructora
 
-    Animal.prototype.sonar = function(){
-        console.log("Hago sonidos porque estoy vivo");
-    }
+//     Animal.prototype.sonar = function(){
+//         console.log("Hago sonidos porque estoy vivo");
+//     }
 
-    Animal.prototype.saludar= function(){
-        console.log(`Hola me llamo ${this.nombre}`);
-    }
+//     Animal.prototype.saludar= function(){
+//         console.log(`Hola me llamo ${this.nombre}`);
+//     }
 
 
-const Boby = new Animal ("Snoopy", "Macho");
- Michi = new Animal ("Kira","Macho");
+// const Boby = new Animal ("Snoopy", "Macho");
+//  Michi = new Animal ("Kira","Macho");
 
- console.log(Boby);
- console.log(Michi);
+//  console.log(Boby);
+//  console.log(Michi);
 
- Boby.sonar();
- Boby.saludar();
+//  Boby.sonar();
+//  Boby.saludar();
 
- Michi.sonar();
- Michi.saludar();
+//  Michi.sonar();
+//  Michi.saludar();
 
 // Una mejora cuando hay muchos objetos ya que la funcion se va a repetir dentro de los 100 objetos que se crea 
 // Para esto quitaremos el metodo sabor en esta caso 
@@ -786,29 +786,21 @@ const Boby = new Animal ("Snoopy", "Macho");
  //* Me toca hacerlo 
 
 //Atributos
-function Heroes (nombre,poder){
+function Heroes (nombre,especial){
     this.nombre=nombre;
-    this.poder=poder
+    this.especial=especial;
 }
 
-//Metodos 
-
-Heroes.prototype.especial = function(){
-    console.log(`El especial de ${this.nombre} es lanzar rayitos a lo pendejo`);
+Heroes.prototype.saludo = function(){
+    console.log(`Hola mi nombres es ${this.nombre}`)
+    console.log(`Mi poder es ${this.especial}`)
 }
 
-Heroes.prototype.experiencia = function (){
-    console.log(`El poder de ${this.nombre} es ${this.poder}`);
-}
+const Axe = new Heroes("Axe","Girar")
 
-const h1 = new Heroes ("Axe","Hoja selectiva")
-    h2 = new Heroes ("Rubick","Robar a lo pendejo")
+console.log(Axe)
+Axe.saludo();
 
-console.log(h1);
-console.log(h2);
-
-h1.especial();
-h1.experiencia();
 
 
 
@@ -827,8 +819,52 @@ console.log(`
 // ========================================================
 `);
 
-//Java scipt usa el poo de otra manera pero si lo utiliza
+//Java scipt usa el poo de otra manera pero si lo utiliza no basado en clases sino en prototipos
+//* Js desde el año 2015 trajo las clases que es azucar sintatico , esa escritura de clases js lo tranforma a prototipos  
 
+
+//TODO Herencia Prototipica 
+
+function Animal(nombre,genero){
+    //Atributos
+    this.nombre =nombre;
+    this.genero =genero;
+    }
+
+    // Metodos agrgados al prototipo de la funcion constructora
+
+    Animal.prototype.sonar = function(){
+        console.log("Hago sonidos porque estoy vivo");
+    }
+
+    Animal.prototype.saludar= function(){
+        console.log(`Hola me llamo ${this.nombre}`);
+    }
+
+    //Herencia prototipica
+
+function Perro(nombre,genero,tamanio){
+    this.super = Animal;
+    this.super(nombre,genero);
+    this.tamanio = tamanio ;
+}
+// Perro esta heredando de animal
+Perro.prototype = new Animal();
+
+
+
+
+const Boby = new Animal ("Snoopy", "Macho");
+ Michi = new Animal ("Kira","Macho");
+
+ console.log(Boby);
+ console.log(Michi);
+
+ Boby.sonar();
+ Boby.saludar();
+
+ Michi.sonar();
+ Michi.saludar();
 
 
 
