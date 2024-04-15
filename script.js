@@ -1206,4 +1206,44 @@ let x =1;
     console.assert(x<y, (x,y,pruebaXY));
 
 
+//? ===========================================================
+//?    JavaScript: 27. Objeto Date - #jonmircha
+//? ===========================================================
+
+console.log(`
+// ============================================================
+//    JavaScript: 27. Objeto Date - #jonmircha
+// ============================================================
+`);
+
+//* Es un contructor DATE
+// El meridiano de Grenwich es la hora 0
+//TODO Constructor Date
+console.log(Date());
+let fecha = new Date();
+    console.log(fecha);
+//TODO Dia del mes
+//*Recordar colocar el parentesis al final o de lo contrario te dara como respuesta que es nativo
+    console.log(fecha.getDate());
+    console.log(fecha.getMonth());
+    console.log(fecha.getYear());
+    console.log(fecha.getFullYear());
+
+    console.log(fecha.getHours());
+    console.log(fecha.getMinutes());
+    console.log(fecha.getSeconds());
+    console.log(fecha.getMilliseconds());
+    //*Te dara la misma cadena de texto que fecha
+    console.log(fecha.toString());
+    console.log(fecha.toDateString());
+    console.log(fecha.toLocaleString());
+    console.log(fecha.toLocaleDateString());
+    console.log(fecha.toLocaleTimeString());
+
+    console.log(fecha.getTimezoneOffset());
+    console.log(fecha.getUTCDate());
+    console.log(fecha.getUTCHours());
+
+
+
 
