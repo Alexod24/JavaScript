@@ -1244,6 +1244,115 @@ let fecha = new Date();
     console.log(fecha.getUTCDate());
     console.log(fecha.getUTCHours());
 
+    //*Recordemos que el utc te da la hora 0 del meridiano de Greenwich
+
+    console.log(Date.now()) //*Timestand se le conoce y esta es la manera correcta de representar el tiempo y del instante de cuantos msegundos han pasado desde el 1 de enero de 1770
+
+    //Libreria muy util momento.js 
+    let cumpleAlex = new Date(2003,4,23);
+    console.log(cumpleAlex);
+    
+//? ===========================================================
+//?    JavaScript: 28. Objeto Math - #jonmircha
+//? ===========================================================
+
+console.log(`
+// ============================================================
+//    JavaScript: 28. Objeto Math - #jonmircha
+// ============================================================
+`);
+
+
+//TODO Math nos ayudara para realizar oepraciones matematicos avanzados , recordemos que es un metodo estatico
+console.log(Math);
+console.log(Math.PI);
+
+//TODO Valor absoluto de un numero
+console.log(Math.abs(7.8))
+console.log(Math.abs(-7.8))
+
+//TODO Ceil para redondear un numero
+console.log(Math.ceil(7.2)); //*Redonde al numero mas grande es decir 8
+console.log(Math.floor(7.2)); //* Redondea al numero mas pequeño es decir 7
+
+console.log(Math.round(7.2)); //* Este es el mejor metodo ya que es la justicia ya que dependiendo del decimal va a redonder al numero mas cercano
+console.log(Math.round(7.6)); //* Este es el mejor metodo ya que es la justicia ya que dependiendo del decimal va a redonder al numero mas cercano
+
+//TODO Raiz cuadrada de un numero
+console.log(Math.sqrt(81)); //*Raiz cuadrada de un numero
+
+//TODO Potencia 
+console.log(Math.pow(5,3)) //* Primero numero es la base y el segundo numero es el exponente
+
+//TODO Verificacion si el numero es negativo o positivo o cero (1,-1,0)
+console.log(Math.sign(5));
+console.log(Math.sign(-5));
+console.log(Math.sign(0));
+
+//TODO Random
+console.log(Math.random()); //* Te dara un numero random entre 0 a 1
+console.log(Math.random()*1000); //* Te dara un numero random entre 0 1000
+console.log(Math.round(Math.random()*1000)); //* Te dara un numero random entre 0 a 1000 pero con el round sera un numero entero
+
+//? ==============================================================
+//?    JavaScript: 29. Operador de Cortocircuito - #jonmircha
+//? ==============================================================
+
+console.log(`
+// ===============================================================
+//    JavaScript: 29. Operador de Cortocircuito - #jonmircha
+// ===============================================================
+`);
+
+//Conjunto de operadores , funciona colocando 2 condiciones
+
+//TODO Cortocircuito con OR - cuando el valor de la izquierda en la expresion siempre pueda validar a true, es el valor que se cargarara por defecto
+
+//TODO Cortocircuito con AND - cuando el valor de la izquierda en la expresio n siempre pueda validad a false, es el valor que se cargara por defecto
+
+// function saludarC(nombreC="Desconocidos"){ - //* Aqui podemos ver que pdemos asiganar un valor por defecto
+
+// Vemos que si hay preferencia ya que si le doy un valor inicial el valor de abajo ya no funcionara
+function saludarC(nombreC){
+    nombreC = nombreC || " mundo"
+    console.log(`Hola ${nombreC}`);
+}
+
+saludarC("Alex") //* Si no viene con un valor se usara lo demas 
+saludarC();
+
+//TODO OR 
+console.log("cadena" || "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log(19|| "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log(true || "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log({} || "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log([] || "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log(false || "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+console.log(null || "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+console.log(undefined || "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+console.log(""|| "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+console.log(-2 || "Valor de la derecha"); 
+console.log(0 || "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+
+//TODO AND 
+//*Basicamente es como OR pero usando && y es todo lo contrario es decir si en un valor verdadero solo imprimia el valor de la izquierda sera lo contrario
+
+console.log("cadena" &&  "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log(19&&  "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log(true &&  "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log({} &&  "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log([] &&  "Valor de la derecha"); //*Aplicara el valor de la izquierda si es verdadero
+console.log(false &&  "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+console.log(null &&  "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+console.log(undefined &&  "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+console.log(""&&  "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+console.log(-2 &&  "Valor de la derecha"); 
+console.log(0 && "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
+
+
+
+
+
 
 
 
