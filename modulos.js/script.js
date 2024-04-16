@@ -1350,6 +1350,192 @@ console.log(-2 &&  "Valor de la derecha");
 console.log(0 && "Valor de la derecha"); //*Aplicara el valor de la derecha si es falso 
 
 
+//? ==============================================================
+//?    JavaScript: 30. alert, confirm y prompt - #jonmircha
+//? ==============================================================
+
+console.log(`
+// ===============================================================
+//    JavaScript: 30. alert, confirm y prompt - #jonmircha
+// ===============================================================
+`);
+
+//* Si mandamos a la consola el objeto window nos bridanara todas las opciones 
+console.log(window);
+
+//* Recorder que no es necesario el window.
+//window.alert("Hola esto es una alerta, corre")
+//window.confirm("Hola esto es una confirmacion")
+//window.prompt("Hola esto es un prompr y le permite al usuario ingresar un valor")
+
+//TODO Una alerta solo sirve para mandar un aviso al usuario
+//TODO En la confirmacion si se presiona el boton de aceptar y si no te dara false
+//TODO En el prompt si el usuario escribir algo dentro de la caja y le da a aceptar esto hara que se almacene sin embargo si le das a cancelar te dara undefined 
+//TODO Un dato en el promp ya que si el usuario escribe algo y le da a cancelar le lanzara null
+
+// let alerta = alert("Hola esto es una alerta");
+//     confirmacion = confirm("Hola esto es una confirmacion")
+//     aviso = prompt("Hola,esto es un aviso y le permite al usuario ingresar un valor");
+
+// console.log(alerta);
+// console.log(confirmacion);
+// console.log(aviso);
+
+//? ==============================================================
+//?     JavaScript: 31. Expresiones Regulares - #jonmircha
+//? ==============================================================
+
+console.log(`
+// ===============================================================
+//     JavaScript: 31. Expresiones Regulares - #jonmircha
+// ===============================================================
+`);
+
+//! TODO LENGUAJE DE PROGRAMACION TIENE QUE TENER EXPRESIONES REGULARES
+
+//! RECOMIENDO LLER DOCUEMENTACION SOBRE EXPRESIONES REGULARES DE JS
+
+//TODO QUE ES UNA EXPRESION REGULAR?
+//* Es mas una secuencia de caracteres que forman un patron de busqueda
+// Son una secuencia de caracteres 
+
+//TODO EXRE CON CONSTRUCTOR 
+
+let cadenaER = "Lorem ipsum dolor sit amet cosdasd lorem lorem sadmas  d";
+
+// Con la i hacemos que le valga vrg las mayusculas o minusculas y con la g encontrara todo 
+// let expReg = new RegExp("lorem","i");
+
+//* Si coloco los corchetes y coloco 1 quiere decir que debe de estar por lo menos una ves
+//* Despues del . es como una condicion es decir 1.2 es que tiene que aparecer entre 1 a 2 veces pero si no colocas nada despues del punto significa que no hay limite, encontrara todo 
+let expReg2 = /lorem{3}/ig;
+
+console.log(expReg2.test(cadenaER));
+console.log(expReg2.exec(cadenaER));
+
+
+//? ======================================================================
+//?     JavaScript: 32. Funciones Anónimas Autoejecutables - #jonmircha
+//? ======================================================================
+
+console.log(`
+// =======================================================================
+//     JavaScript: 32. Funciones Anónimas Autoejecutables - #jonmircha
+// =======================================================================
+`);
+
+// En ingles inmediat invo anonimo xpres
+
+//* Funcion anonima autoejecutable  - Encapsulamiento
+//! Siempre que ustes Autoejecutables tienes que usar el ;
+(function(){
+    console.log("Mi primera IIFE")
+})();
+
+(function(d,w,c){
+    console.log("Mi primera IIFE")
+    console.log(d);
+    console.log(w);
+    c.log("Esto es un console.log")
+})(document,window, console);
+
+//TODOS Otros metodos
+
+(function(){
+    console.log("Version Clasica")
+})();
+
+//La Crockford (JS the god parts)
+((function(){
+    console.log("Version Crockford")
+})());
+
+//Unaria
++function(){
+    console.log("Version Unaria")
+}();
+
+//Facebook
+!function(){
+    console.log("Version Facebook")
+}();
+
+//? ======================================================================
+//?     JavaScript: 33. Módulos ( import / export ) - #jonmircha
+//? ======================================================================
+
+console.log(`
+// =======================================================================
+//     JavaScript: 33. Módulos ( import / export ) - #jonmircha
+// =======================================================================
+`);
+
+// Los modulos te permiten llamar otros archivos 
+//* Todos los datos de modulos estan en los archivos /modulo.js
+
+//? =====================================================================================
+//?     JavaScript: 34. Ejercicios de Lógica de Programación ( 1 / 10 ) - #jonmircha
+//? =====================================================================================
+
+console.log(`
+// ======================================================================================
+//     JavaScript: 34. Ejercicios de Lógica de Programación ( 1 / 10 ) - #jonmircha
+// ======================================================================================
+`);
+
+
+
+// 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+// 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+
+//? ==============================
+//?     Practica #01 - Alex OD
+//? ==============================
+
+console.log(`
+// ==============================
+//     Practica #01 - Alex OD
+// ==============================
+`);
+
+// 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+
+
+function init(){
+    let saludoPractica = "Hola mundo"
+    console.log("La palabra Hola mundo tiene " +saludoPractica.length +" letras")
+}
+
+init();
+
+
+//? ==============================
+//?     Practica #02 - Alex OD
+//? ==============================
+
+console.log(`
+// ==============================
+//     Practica #02 - Alex OD
+// ==============================
+`);
+
+// 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+
+function recorte(){
+    let caracteresIndicado = "Hola mundo"
+    console.log(caracteresIndicado.slice(0,5))
+}
+recorte();
+
+function recorte1(){
+    let caracteresIndicadoConAt = "Hola mundo";
+    console.log()
+}
+
+
+
+
 
 
 
