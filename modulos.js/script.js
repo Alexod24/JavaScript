@@ -1,23 +1,3 @@
-
-funcionglobal();
-
-function funcionglobal(){
-    console.log("Hola mundo")
-}
-
-funcionglobal();
-
-// Funcion global dentro de una variable
-
-
-const funcionglocal = function(){
-
-    console.log("Hola mundo 2")
-
-}
-
-funcionglocal();
-
 //? =================================================
 //?    JavaScript: 11. Arreglos [Arrays] - #jonmircha
 //? =================================================
@@ -1148,7 +1128,7 @@ console.log(`Hola mi nombre es ${nombre}`)
 // Este es un comodin % que va a reemplara por ejemplo
 
 console.log(`Hola mi nombre es %s y tengo %s de edad`,nombre,edad)
-console.clear(); //*Limpiar ventana 
+// console.clear(); //*Limpiar ventana 
 console.log(window);
 console.log(document)
 //TODO GRUPOS
@@ -1161,7 +1141,7 @@ console.groupEnd();
 //TODO DESPLEGABLE
 console.groupCollapsed("Curso de Node");
 console.groupEnd();
-console.clear();
+// console.clear();
 //TODO TABLITA
 console.log(console);
 console.table(Object.entries(console).sort());
@@ -1190,7 +1170,7 @@ for (let i =0; i < arreglo.length; i++){
 console.timeEnd("Cuanto tiempo se tarde mi codigo")
 console.log(arreglo);
 
-console.clear();
+// console.clear();
 //TODO USA EL FOR Y ES BUENO PARA DETECTAR ERRORES 
 for(let i =0;i<= 10;i++){
     console.count("codigo for");
@@ -1486,7 +1466,7 @@ console.log(`
 
 
 // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
-// 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
 
 
 //? ==============================
@@ -1502,13 +1482,42 @@ console.log(`
 // 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
 
 
-function init(){
-    let saludoPractica = "Hola mundo"
-    console.log("La palabra Hola mundo tiene " +saludoPractica.length +" letras")
-}
+// function init(){
+//     let saludoPractica = "Hola mundo"
+//     console.log("La palabra Hola mundo tiene " +saludoPractica.length +" letras")
+// }
 
-init();
+// init();
+//TODO Mejor forma a diferencia de la basura que hiciste arriba
+//* Funciones declaradas usando console warn , if - else 
 
+// function contarLetra(caracteres=""){
+//     if (!caracteres){
+//         console.warn("No has ingresado ningun dato")
+//     } else {
+//         console.log(`La palabra ${caracteres} tiene ${caracteres.length} caracteres`)
+
+//     }
+// }
+
+// contarLetra();
+// contarLetra("Hola mundo");
+
+
+
+//TODO Una mejor forma es esta
+//* Una sola linea de codigo a diferencia del anterior
+//* Con la ayuda de las funciones expresadas y de las arrow function se convierte en un codigo limpio 
+
+// Si ponemos llaves en la arrow function tenemos que poner return para que funcion asi que mejor usamos la continuidad de las arrow function
+
+const contarLetra=(caracteres="")=>
+    (!caracteres)
+        ?console.warn("No has ingresado ningun dato")
+            :console.log(`La palabra ${caracteres} tiene ${caracteres.length} caracteres`)
+
+contarLetra();
+contarLetra("Hola mundo");
 
 //? ==============================
 //?     Practica #02 - Alex OD
@@ -1522,19 +1531,62 @@ console.log(`
 
 // 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
 
-function recorte(){
-    let caracteresIndicado = "Hola mundo"
-    console.log(caracteresIndicado.slice(0,5))
+// function recorte(){
+//     let caracteresIndicado = "Hola mundo"
+//     console.log(caracteresIndicado.slice(0,5))
+// }
+// recorte();
+
+const recortarPalabra = (oracion="",longitud=undefined)=>(!oracion)?console.warn("No has ingresado ningun dato"):console.log(cadena.slice(0,longitud))
+recortarPalabra("Hola mundo",1);
+
+//? ==============================
+//?     Practica #03 - Alex OD
+//? ==============================
+
+console.log(`
+// ==============================
+//     Practica #03 - Alex OD
+// ==============================
+`);
+
+// 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+function letraXletra(){
+    let mensaje = "Hola mundo";
+    for(const letra of mensaje){
+        console.log(letra)
+    }
+
 }
-recorte();
+letraXletra();
 
-function recorte1(){
-    let caracteresIndicadoConAt = "Hola mundo";
-    console.log()
+
+//? ==============================
+//?     Practica #04 - Alex OD
+//? ==============================
+
+console.log(`
+// ==============================
+//     Practica #04 - Alex OD
+// ==============================
+`);
+
+// 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+//TODO ciclo for
+// for (inicializacion de variable; condicion;
+// decremento o incremento ){
+//     sentencias que ejecuta el for
+//     sentencias que ejecuta el for
+// }
+
+function practica4(){
+    const impirmirVariasVeces= Array(10).fill("Hola mundo")
+    console.log(impirmirVariasVeces)
 }
 
-
-
+practica4();
 
 
 
