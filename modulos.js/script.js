@@ -1503,6 +1503,9 @@ console.log(`
 // contarLetra();
 // contarLetra("Hola mundo");
 
+const contarLetra=(caracteres="")=>(!caracteres)?console.warn("rNo has ingesado ningun dato oe ctmr"):console.log(`La palabra ${caracteres} tiene ${caracteres.length} caracteres`)
+
+contarLetra("Hola Sanes como estas");
 
 
 //TODO Una mejor forma es esta
@@ -1511,13 +1514,6 @@ console.log(`
 
 // Si ponemos llaves en la arrow function tenemos que poner return para que funcion asi que mejor usamos la continuidad de las arrow function
 
-const contarLetra=(caracteres="")=>
-    (!caracteres)
-        ?console.warn("No has ingresado ningun dato")
-            :console.log(`La palabra ${caracteres} tiene ${caracteres.length} caracteres`)
-
-contarLetra();
-contarLetra("Hola mundo");
 
 //? ==============================
 //?     Practica #02 - Alex OD
