@@ -1503,10 +1503,10 @@ console.log(`
 // contarLetra();
 // contarLetra("Hola mundo");
 
-const contarLetra=(caracteres="")=>(!caracteres)?console.warn("rNo has ingesado ningun dato oe ctmr"):console.log(`La palabra ${caracteres} tiene ${caracteres.length} caracteres`)
+const deletrear=(caracteres="")=>(!caracteres)?console.warn("No has ingresado ningun dato"):console.log(`La palabra ${caracteres} tiene ${caracteres.length} caracteres`)
 
-contarLetra("Hola Sanes como estas");
-
+deletrear();
+deletrear("Hola mundo");
 
 //TODO Una mejor forma es esta
 //* Una sola linea de codigo a diferencia del anterior
@@ -1533,8 +1533,9 @@ console.log(`
 // }
 // recorte();
 
-const recortarPalabra = (oracion="",longitud=undefined)=>(!oracion)?console.warn("No has ingresado ningun dato"):console.log(cadena.slice(0,longitud))
-recortarPalabra("Hola mundo",1);
+const recortar=(recote="", longitud=undefined)=>(!recote)?console.warn("No has ingresado ningun dato"):(!longitud)?console.warn("No has ingresado la longitud"):console.log(`La palabra ${recote} es recortada segun la longutid y este seria el resultado ${recote.slice(0,longitud)} `)
+recortar();
+recortar("hola mundo",4)
 
 //? ==============================
 //?     Practica #03 - Alex OD
