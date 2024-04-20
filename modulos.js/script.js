@@ -1384,14 +1384,26 @@ console.log(`
 let cadenaER = "Lorem ipsum dolor sit amet cosdasd lorem lorem sadmas  d";
 
 // Con la i hacemos que le valga vrg las mayusculas o minusculas y con la g encontrara todo 
-// let expReg = new RegExp("lorem","i");
+let expReg = new RegExp("lorem","i");
 
 //* Si coloco los corchetes y coloco 1 quiere decir que debe de estar por lo menos una ves
 //* Despues del . es como una condicion es decir 1.2 es que tiene que aparecer entre 1 a 2 veces pero si no colocas nada despues del punto significa que no hay limite, encontrara todo 
 let expReg2 = /lorem{3}/ig;
 
-console.log(expReg2.test(cadenaER));
-console.log(expReg2.exec(cadenaER));
+console.log(expReg.test(cadenaER));
+console.log(expReg.exec(cadenaER));
+
+// Método	Descripción
+// exec()	Ejecuta una búsqueda por una coincidencia en una cadena. Devuelve un arreglo de información o null en una discrepancia.
+// test()	Prueba una coincidencia en una cadena. Devuelve true o false.
+// match()	Devuelve un arreglo que contiene todas las coincidencias, incluidos los grupos de captura, o null si no se encuentra ninguna coincidencia.
+// matchAll()	Devuelve un iterador que contiene todas las coincidencias, incluidos los grupos de captura.
+// search()	Prueba una coincidencia en una cadena. Devuelve el índice de la coincidencia, o -1 si la búsqueda falla.
+// replace()	Ejecuta una búsqueda por una coincidencia en una cadena y reemplaza la subcadena coincidente con una subcadena de reemplazo.
+// replaceAll()	Ejecuta una búsqueda de todas las coincidencias en una cadena y reemplaza las subcadenas coincidentes con una subcadena de reemplazo.
+// split()	Utiliza una expresión regular o una cadena fija para dividir una cadena en un arreglo de subcadenas.
+
+
 
 
 //? ======================================================================
@@ -1503,10 +1515,10 @@ console.log(`
 // contarLetra();
 // contarLetra("Hola mundo");
 
-const deletrear=(caracteres="")=>(!caracteres)?console.warn("No has ingresado ningun dato"):console.log(`La palabra ${caracteres} tiene ${caracteres.length} caracteres`)
+const cadenaContar=(cadena1="")=>(!cadena1)?console.error("Te olvidaste de ingresar la cadena"):console.warn(`${cadena1} tiene ${cadena1.length} caracteres`)
+cadenaContar("Hola mundo");
+cadenaContar();
 
-deletrear();
-deletrear("Hola mundo");
 
 //TODO Una mejor forma es esta
 //* Una sola linea de codigo a diferencia del anterior
@@ -1533,9 +1545,10 @@ console.log(`
 // }
 // recorte();
 
-const recortar=(recote="", longitud=undefined)=>(!recote)?console.warn("No has ingresado ningun dato"):(!longitud)?console.warn("No has ingresado la longitud"):console.log(`La palabra ${recote} es recortada segun la longutid y este seria el resultado ${recote.slice(0,longitud)} `)
-recortar();
-recortar("hola mundo",4)
+const cadenaRecortar = (cadena2="",recortar=undefined)=>(!cadena2)?console.error("No has ingresado una cadena"):(!recortar)?console.error("No has ingresado el limite para el recorte"):console.warn(`La cadena que ingresaste es: ${cadena2} y el recorte que asignaste es ${recortar} = ${cadena2.slice(0,recortar)}`)
+cadenaRecortar("Hola mundo","1");
+
+
 
 //? ==============================
 //?     Practica #03 - Alex OD
@@ -1549,14 +1562,38 @@ console.log(`
 
 // 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 
-function letraXletra(){
-    let mensaje = "Hola mundo";
-    for(const letra of mensaje){
-        console.log(letra)
-    }
+// function letraXletra(){
+//     let mensaje = "Hola mundo";
+//     for(const letra of mensaje){
+//         console.log(letra)
+//     }
 
-}
-letraXletra();
+// }
+// letraXletra();
+
+//TODO Me toca a mi 
+
+const separadorCadena = (cadena3="", separador=undefined)=>
+    (!cadena3)?console.error("No has ingresado una cadena")
+        :(!separador)?console.error("No has ingresado el separador")
+            :console.info(cadena3.split(separador));
+
+separadorCadena("Hola mundo Hola mundo Hola mundo"," ");
+separadorCadena("Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec",",")
+
+// const separadorCadena = (cadena3="", separador=undefined)=>{
+//     if(!cadena3) return console.error("No has ingresado una cadena")
+//     if(!separador) return console.error("No has ingresado el separador")
+//     for (let i = 0; i < cadena3.length; i++) {
+//         console.log(cadena3[i]+separador);
+        
+//     }
+// }
+
+// separadorCadena("Hola mundo"," ");
+
+
+
 
 
 //? ==============================
@@ -1578,12 +1615,95 @@ console.log(`
 //     sentencias que ejecuta el for
 // }
 
-function practica4(){
-    const impirmirVariasVeces= Array(10).fill("Hola mundo")
-    console.log(impirmirVariasVeces)
+// function practica4(){
+//     const impirmirVariasVeces= Array(10).fill("Hola mundo")
+//     console.log(impirmirVariasVeces)
+// }
+
+// practica4();
+
+const repetirCadena = (cadena4="", ciclo=undefined)=>{
+
+    if(ciclo===undefined) return console.error("No has ingresado el ciclo de repeticion");
+    if(ciclo ===0) return console.warn("No puedes repetir una cadena 0 veces, no tiene sentido")
+    if(Math.sign === -1) return console.error("No se recibe numeros negativos")
+    for (let rep = 1; rep <= ciclo; rep++) {
+        console.log(`${cadena4} ${rep}`)
+    }
+    }
+
+repetirCadena("Hola mundo" , 5);
+
+
+
+
+
+//? ==============================
+//?     Practica #05 - Alex OD
+//? ==============================
+
+console.log(`
+// ==============================
+//     Practica #05 - Alex OD
+// ==============================
+`);
+// 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+//TODO Estaba mas facil de lo pensaba
+
+const revertirCadena= (cadena5="")=>
+    (!cadena5)?console.error("La cadena esta vacia"):console.warn(cadena5.split("").reverse().join(""));
+
+revertirCadena();
+revertirCadena("Hola Mundo");
+
+
+
+// const arrayPractica=["Alex","Adrian","Nicolas"];
+// console.log(arrayPractica)
+// const revertir=arrayPractica.reverse();
+// console.log(revertir)
+
+// const revertirPalabras = (mensajeReverse="") => console.log(mensajeReverse)
+// const usoDelReverse = revertirPalabras.reverse;
+// console.log(usoDelReverse)
+
+// revertirPalabras("Hola mundo prueba")
+
+
+// function invertirCadena(cad){
+//     var separarSplit = cad.split(0);
+//     var usarReverse = separarSplit.reverse();
+//     var usarJoin = usarReverse.join("");
+//     return usarJoin
+
+// }
+
+
+
+
+
+
+// 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+
+
+//TODO Hice coopypaste nomas, no cuenta pero esta es la solucion
+
+const cadBuscar = /mundo*/g;
+let str = "Hola mundo, me gusta el mundo, daria la vida por mi mundo";
+let arrayBuscar;
+while ((arrayBuscar = cadBuscar.exec(str))){
+    var msg = "Se ha encontrado " + arrayBuscar[0] + ". ";
+    msg += "La siguiente coincidencia empieza en el indice " + cadBuscar.lastIndex;
+    console.log(msg);
 }
 
-practica4();
+
+
+// 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+
+
+
+// 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
 
 
