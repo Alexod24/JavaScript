@@ -1686,26 +1686,68 @@ revertirCadena("Hola Mundo");
 // 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
 
 
-//TODO Hice coopypaste nomas, no cuenta pero esta es la solucion
 
-const cadBuscar = /mundo*/g;
-let str = "Hola mundo, me gusta el mundo, daria la vida por mi mundo";
-let arrayBuscar;
-while ((arrayBuscar = cadBuscar.exec(str))){
-    var msg = "Se ha encontrado " + arrayBuscar[0] + ". ";
-    msg += "La siguiente coincidencia empieza en el indice " + cadBuscar.lastIndex;
-    console.log(msg);
+
+//? ==============================
+//?     Practica #06 - Alex OD
+//? ==============================
+
+console.log(`
+// ==============================
+//     Practica #06 - Alex OD
+// ==============================
+`);
+
+const contarPalabra = (texto="", palabra="")=>{
+    (!texto)?console.log("No has ingresado el texto"):(!palabra)?console.log("No has ingresado la palabra a buscar"):console.log("Evaluando parametros");
+    let contador=0
+        i=0
+    while(i!==-1){
+    i=texto.indexOf(palabra,i)
+    if(i!==-1){
+        contador++,
+        i++;s
+    }
+} 
+    return console.log(`La palabra ${palabra} se repite ${contador} veces`)
+
+
 }
+// contarPalabra("Hola mundo mundo mundo","mundo")
+
+
+//? ==============================
+//?     Practica #07 - Alex OD
+//? ==============================
+
+console.log(`
+// ==============================
+//     Practica #07 - Alex OD
+// ==============================
+`);
 
 
 
 // 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 
 
+//TODO Ahora me toca a mi
+
+const Polindromo = (palabra="")=>{
+    if(!palabra) return console.log("No has ingresado una palabra");
+    palabra=palabra.toLowerCase();
+    let alReves= palabra.split("").reverse().join("");
+    return (alReves===palabra)
+        ?console.log("Si es un polingromo")
+        :console.log("No es un polingromo")
+}
+
+Polindromo("soos")
+
 
 // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
-
+ 
 
 
 
