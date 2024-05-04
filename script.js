@@ -1699,20 +1699,21 @@ console.log(`
 `);
 
 const contarPalabra = (texto="", palabra="")=>{
-    (!texto)?console.log("No has ingresado el texto"):(!palabra)?console.log("No has ingresado la palabra a buscar"):console.log("Evaluando parametros");
-    let contador=0
-        i=0
+    if(!texto) return console.log("No has ingresado un texto");
+    if(!palabra) return console.log("No has ingresado la palabra a buscar");
+    let contador=0,
+        i=0;
     while(i!==-1){
-    i=texto.indexOf(palabra,i)
-    if(i!==-1){
-        contador++,
-        i++;s
+        texto.indexOf(palabra,i);
+        if(i!==-1){
+            contador++,
+            i++;
+        }
     }
-} 
-    return console.log(`La palabra ${palabra} se repite ${contador} veces`)
-
-
+    return console.log(`La palabra ${palabra} se repite ${contador} veces`);
 }
+contarPalabra("Hola mundo mundo","mundo")
+
 // contarPalabra("Hola mundo mundo mundo","mundo")
 
 
@@ -1733,17 +1734,11 @@ console.log(`
 
 //TODO Ahora me toca a mi
 
-const Polindromo = (palabra="")=>{
-    if(!palabra) return console.log("No has ingresado una palabra");
-    palabra=palabra.toLowerCase();
-    let alReves= palabra.split("").reverse().join("");
-    return (alReves===palabra)
-        ?console.log("Si es un polingromo")
-        :console.log("No es un polingromo")
+const polindromo = (palabra="")=>{
+    if(!palabra) return console.log("No has ingresado un texto")
+    palabra = palabra.toLowerCase();
+    
 }
-
-Polindromo("soos")
-
 
 // 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
